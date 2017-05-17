@@ -8,15 +8,14 @@ class FizzBuzz extends Output {
     outputsStrings.mkString(" ")
   }
 
-  protected def mapRangeToOutput(first: Int, last: Int): IndexedSeq[Either[Int, String]] = {
+  protected def mapRangeToOutput(first: Int, last: Int): IndexedSeq[FizzBuzzValue] = {
     (first to last)
       .map(output(_))
   }
 
-  protected def outputToStrings(outputs: IndexedSeq[Either[Int, String]]): IndexedSeq[String] = {
+  protected def outputToStrings(outputs: IndexedSeq[FizzBuzzValue]): IndexedSeq[String] = {
     outputs.map {
-      case Left(value) => value.toString
-      case Right(value) => value
+      case value => value.toString
     }
   }
 }

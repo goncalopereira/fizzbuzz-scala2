@@ -9,19 +9,19 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
   val fb = new FizzBuzz
 
   "Output" should "integer given 1" in {
-    fb.output(1) shouldEqual Left(1)
+    fb.output(1) shouldEqual FizzBuzzInteger(1)
   }
 
   it should "fizz given 3" in {
-    fb.output(3) shouldEqual Right("fizz")
+    fb.output(3) shouldEqual FizzString()
   }
 
   it should "buzz given 5" in {
-    fb.output(5) shouldEqual Right("buzz")
+    fb.output(5) shouldEqual BuzzString()
   }
 
   it should "fizzbuzz given 15" in {
-    fb.output(15) shouldEqual Right("fizzbuzz")
+    fb.output(15) shouldEqual FizzBuzzString()
   }
 
   "Produce" should "integer given range one element" in {

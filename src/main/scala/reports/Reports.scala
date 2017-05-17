@@ -10,7 +10,7 @@ trait Reports
     OutputTypes.Integer
   )
 
-  def report(outputs: IndexedSeq[Either[Int, String]]): IndexedSeq[String] = {
+  def report(outputs: IndexedSeq[FizzBuzzValue]): IndexedSeq[String] = {
     val outputReport = generate(outputs)
 
     sortedReportToStrings(outputReport)
