@@ -3,7 +3,7 @@ package com.equalexperts.fb
 class FizzBuzz extends Output {
   def produce(first: Int, last: Int): String = {
     val outputs = mapRangeToOutput(first, last)
-    val outputsStrings = outputs.map(_.toString)
+    val outputsStrings = outputs.map(_.toValue)
 
     outputsStrings.mkString(" ")
   }

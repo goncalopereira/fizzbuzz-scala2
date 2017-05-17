@@ -10,7 +10,7 @@ trait ReportGenerator {
             "integer" -> (reportMap.getOrElse("integer", 0) + 1)
           )
           case value => reportMap + (
-            value.toString() -> (reportMap.getOrElse(value.toString(), 0) + 1)
+            value.toValue -> (reportMap.getOrElse(value.toValue, 0) + 1)
           )
         }
     }

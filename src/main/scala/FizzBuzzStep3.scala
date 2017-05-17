@@ -9,7 +9,7 @@ class FizzBuzzStep3
 
     val outputsReport = report(outputs)
 
-    val outputsStrings = outputs.map(_.toString)
+    val outputsStrings = outputs.map(_.toValue)
 
     (outputsStrings ++ outputsReport)
       .mkString(" ")

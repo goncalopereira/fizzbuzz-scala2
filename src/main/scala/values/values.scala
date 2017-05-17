@@ -1,18 +1,20 @@
 package com.equalexperts.fb
 
-abstract class FizzBuzzValue
+abstract class FizzBuzzValue {
+  def toValue(): String
+}
 case class FizzBuzzInteger(i: Integer) extends FizzBuzzValue {
-  override def toString(): String = { i.toString() }
+  def toValue(): String = { i.toString() }
 }
 case class FizzString() extends FizzBuzzValue {
-  override def toString(): String = { "fizz" }
+  def toValue(): String = { "fizz" }
 }
 case class BuzzString() extends FizzBuzzValue {
-  override def toString(): String = { "buzz" }
+  def toValue(): String = { "buzz" }
 }
 case class FizzBuzzString() extends FizzBuzzValue {
-  override def toString(): String = { "fizzbuzz" }
+  def toValue(): String = { "fizzbuzz" }
 }
 case class LuckyString() extends FizzBuzzValue {
-  override def toString(): String = { "lucky" }
+  def toValue(): String = { "lucky" }
 }
