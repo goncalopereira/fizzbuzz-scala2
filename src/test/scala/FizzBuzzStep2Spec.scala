@@ -13,23 +13,23 @@ class FizzBuzzStep2Spec extends FlatSpec with Matchers {
   }
 
   it should "lucky given 3" in {
-    fb.output(3) shouldEqual LuckyString()
+    fb.output(3) shouldEqual LuckyString
   }
 
   it should "fizzbuzz given 6" in {
-    fb.output(6) shouldEqual FizzString()
+    fb.output(6) shouldEqual FizzString
   }
 
   it should "buzz given 5" in {
-    fb.output(5) shouldEqual BuzzString()
+    fb.output(5) shouldEqual BuzzString
   }
 
   it should "fizzbuzz given 15" in {
-    fb.output(15) shouldEqual FizzBuzzString()
+    fb.output(15) shouldEqual FizzBuzzString
   }
 
   it should "lucky given 13" in {
-    fb.output(13) shouldEqual LuckyString()
+    fb.output(13) shouldEqual LuckyString
   }
 
   "Produce" should "integer given range one element" in {

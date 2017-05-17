@@ -3,18 +3,18 @@ package com.equalexperts.fb
 abstract class FizzBuzzValue {
   def toValue(): String
 }
-case class FizzBuzzInteger(i: Integer) extends FizzBuzzValue {
+final case class FizzBuzzInteger(i: Integer) extends FizzBuzzValue {
   def toValue(): String = { i.toString() }
 }
-case class FizzString() extends FizzBuzzValue {
+case object FizzString extends FizzBuzzValue {
   def toValue(): String = { "fizz" }
 }
-case class BuzzString() extends FizzBuzzValue {
+case object BuzzString extends FizzBuzzValue {
   def toValue(): String = { "buzz" }
 }
-case class FizzBuzzString() extends FizzBuzzValue {
+case object FizzBuzzString extends FizzBuzzValue {
   def toValue(): String = { "fizzbuzz" }
 }
-case class LuckyString() extends FizzBuzzValue {
+case object LuckyString extends FizzBuzzValue {
   def toValue(): String = { "lucky" }
 }
