@@ -7,7 +7,7 @@ trait ReportGenerator {
       (reportMap, output) =>
         output match {
           case FizzBuzzInteger(_) => reportMap + (
-            OutputTypes.Integer -> (reportMap.getOrElse(OutputTypes.Integer, 0) + 1)
+            "integer" -> (reportMap.getOrElse("integer", 0) + 1)
           )
           case value => reportMap + (
             value.toString() -> (reportMap.getOrElse(value.toString(), 0) + 1)

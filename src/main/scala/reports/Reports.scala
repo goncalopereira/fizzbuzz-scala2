@@ -3,11 +3,11 @@ package com.equalexperts.fb
 trait Reports
     extends ReportGenerator {
   val reportOrder = IndexedSeq(
-    OutputTypes.Fizz,
-    OutputTypes.Buzz,
-    OutputTypes.FizzBuzz,
-    OutputTypes.Lucky,
-    OutputTypes.Integer
+    "fizz",
+    "buzz",
+    "fizzbuzz",
+    "lucky",
+    "integer"
   )
 
   def report(outputs: IndexedSeq[FizzBuzzValue]): IndexedSeq[String] = {
