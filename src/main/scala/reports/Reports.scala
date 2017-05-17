@@ -20,6 +20,6 @@ trait Reports
     val existingReportOrder = reportOrder.filter(outputReport.contains(_))
 
     existingReportOrder
-      .map(key => "%s: %s".format(key, outputReport(key)))
+      .map(key => augmentString("%s: %s").format(key, outputReport(key)))
   }
 }
