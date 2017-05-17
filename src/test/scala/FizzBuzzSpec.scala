@@ -13,15 +13,15 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
   }
 
   it should "fizz given 3" in {
-    fb.output(3) shouldEqual FizzString
+    fb.output(3) shouldEqual FizzBuzzString("fizz")
   }
 
   it should "buzz given 5" in {
-    fb.output(5) shouldEqual BuzzString
+    fb.output(5) shouldEqual FizzBuzzString("buzz")
   }
 
   it should "fizzbuzz given 15" in {
-    fb.output(15) shouldEqual FizzBuzzString
+    fb.output(15) shouldEqual FizzBuzzString("fizzbuzz")
   }
 
   "Produce" should "integer given range one element" in {
