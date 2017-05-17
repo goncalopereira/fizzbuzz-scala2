@@ -1,6 +1,6 @@
 package com.equalexperts.fb
 
-abstract class FizzBuzzValue {
+sealed abstract class FizzBuzzValue {
   def toValue(): String
 }
 final case class FizzBuzzInteger(i: Integer) extends FizzBuzzValue {
