@@ -17,7 +17,7 @@ trait Reports
   }
 
   private def sortedReportToStrings(outputReport: Map[String, Int]): IndexedSeq[String] = {
-    val existingReportOrder = reportOrder.filter(outputReport.contains(_))
+    val existingReportOrder = reportOrder.filter(outputReport.contains)
 
     existingReportOrder
       .map(key => augmentString("%s: %s").format(key, outputReport(key)))

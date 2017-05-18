@@ -3,13 +3,10 @@ package com.equalexperts.fb
 class FizzBuzz extends Output {
   def produce(first: Int, last: Int): String = {
     val outputs = mapRangeToOutput(first, last)
-    val outputsStrings = outputs.map(_.toValue)
+    val outputsStrings = outputs.map(_.toValue())
 
     outputsStrings.mkString(" ")
   }
 
-  protected def mapRangeToOutput(first: Int, last: Int): IndexedSeq[FizzBuzzValue] = {
-    (first to last)
-      .map(output(_))
-  }
+  protected def mapRangeToOutput(first: Int, last: Int): IndexedSeq[FizzBuzzValue] = (first to last).map(output)
 }
