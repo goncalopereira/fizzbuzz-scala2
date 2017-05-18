@@ -58,7 +58,8 @@ lazy val root = (project in file(".")).
     ),
     coverageMinimum := 90,
     coverageFailOnMinimum := false,
-    coverageHighlighting := true
+    coverageHighlighting := true,
+    exportJars := true
   )
 
   wartremoverWarnings ++= Warts.all

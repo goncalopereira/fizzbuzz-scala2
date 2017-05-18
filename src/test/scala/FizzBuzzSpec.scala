@@ -6,7 +6,7 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
 
   behavior of "The FizzBuzz"
 
-  val fb = new FizzBuzz
+  val fb: FizzBuzz = new FizzBuzz
 
   "Output" should "integer given 1" in {
     fb.output(1) shouldEqual FizzBuzzInteger(1)

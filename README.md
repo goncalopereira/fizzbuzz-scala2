@@ -24,3 +24,6 @@ FizzBuzz class I'm instead creating the new FizzBuzzStep2 class.
 
 ### Code Coverage
 `sbt clean coverage test coverageReport`
+
+### Package
+`sbt assembly`
