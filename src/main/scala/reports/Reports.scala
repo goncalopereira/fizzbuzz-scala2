@@ -1,7 +1,6 @@
 package com.equalexperts.fb
 
-trait Reports
-    extends ReportGenerator {
+trait ReportOrder {
   val reportOrder = IndexedSeq(
     "fizz",
     "buzz",
@@ -9,6 +8,11 @@ trait Reports
     "lucky",
     "integer"
   )
+}
+
+trait Reports
+    extends ReportGenerator {
+  this: ReportOrder =>
 
   def report(outputs: IndexedSeq[FizzBuzzValue]): IndexedSeq[String] = {
     val outputReport = generate(outputs)
@@ -17,7 +21,7 @@ trait Reports
   }
 
   private def sortedReportToStrings(outputReport: Map[String, Int]): IndexedSeq[String] = {
-    val existingReportOrder = reportOrder.filter(outputReport.contains)
+    val existingReportOrder = reportOrder.filter(outputReport.contains(_))
 
     existingReportOrder
       .map(key => augmentString("%s: %s").format(key, outputReport(key)))
